@@ -1,0 +1,16 @@
+<!-- header -->
+{{ partial "header.html" . }}
+
+<!-- hello -->
+{{ readFile "/content/home/hello.md" | markdownify }}
+
+<!-- recent blog posts -->
+{{ partial "recent_blog_posts.html" . | markdownify }}
+
+<!-- projects -->
+{{ readFile "/content/home/projects.md" | markdownify }}
+
+<!-- contact -->
+{{ readFile "/content/home/contact.md" | markdownify }}
+<!-- footer -->
+{{ partial "footer.html" . }}

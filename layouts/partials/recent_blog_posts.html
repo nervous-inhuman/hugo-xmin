@@ -1,0 +1,9 @@
+## recent blog posts ([see all]({{"posts" | relURL}}))
+
+{{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
+  <li style="font-size: 24px;margin-bottom: 10px; list-style: none">
+      <span style="float: right; clear: both; margin-bottom: 5px;font-size: 14px; color: #828282;">{{ .Date.Format "Mon Jan 2 2006" }}</span>
+      <span><strong><a href="{{ .Permalink }}">{{ .Title }}</a></strong></span>
+  </li>
+
+{{end}}

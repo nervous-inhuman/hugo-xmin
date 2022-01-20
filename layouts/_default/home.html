@@ -1,16 +1,26 @@
 <!-- header -->
 {{ partial "header.html" . }}
 
+<div class="content">
 <!-- hello -->
+<div class="hello">
 {{ readFile "/content/home/hello.md" | markdownify }}
+</div>
 
+<div class="recent">
 <!-- recent blog posts -->
 {{ partial "recent_blog_posts.html" . | markdownify }}
+</div>
 
+<div class="projects">
 <!-- projects -->
 {{ readFile "/content/home/projects.md" | markdownify }}
+</div>
 
+<div class="contact">
 <!-- contact -->
 {{ readFile "/content/home/contact.md" | markdownify }}
+</div>
+</div>
 <!-- footer -->
 {{ partial "footer.html" . }}

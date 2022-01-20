@@ -11,7 +11,11 @@
 
   <body>
     <header style="border-bottom: 1px solid #e8e8e8">
-    <h2 style="text-align: center"><a href="{{.Site.BaseURL}}">{{ .Site.Title }}</a></h2>
+        <div style="margin-left: auto; margin-right: auto; width: 15em">
+        <a href="{{.Site.BaseURL}}">
+            <img height="100px" src="{{ "/hksk.png" | relURL }}">
+        </a>
+        </div>
     <nav>
     <ul class="menu">
       {{ range .Site.Menus.main }}

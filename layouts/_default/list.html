@@ -1,11 +1,13 @@
 {{ partial "header.html" . }}
 
+<div class="title">
 {{if not .IsHome }}
 <h1>{{ .Title | markdownify }}</h1>
 {{ end }}
-
+</div>
 {{ .Content }}
 
+<div class="archive">
 {{ with .Site.GetPage "section" "posts" }}
 {{ range .Data.Pages.GroupByDate "2006" }}
 <h2 style="text-align: center; color: #828282">{{.Key}}</h2>
@@ -14,10 +16,9 @@
       <span style="float: right; clear: both; margin-bottom: 5px;font-size: 14px; color: #828282;">{{ .Date.Format "Mon Jan 2 2006" }}</span>
       <span><strong><a href="{{ .Permalink }}">{{ .Title }}</a></strong></span>
   </li>
-
 {{ end }}
 {{ end }}
 {{ end }}
-
+</div>
 
 {{ partial "footer.html" . }}

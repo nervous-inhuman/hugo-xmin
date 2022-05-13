@@ -2,7 +2,7 @@ body {
   max-width: 740px;
   margin: auto;
   padding: 1em;
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 
 /* header and footer areas */
